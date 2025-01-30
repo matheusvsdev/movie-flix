@@ -1,5 +1,8 @@
 package com.matheusvsdev.backendmovieflix.entities;
 
+import jakarta.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Content {
     private String imgUrl;
     private String title;
