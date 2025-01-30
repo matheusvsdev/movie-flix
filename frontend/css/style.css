@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #000000;
+  --navbar-color: #222222;
+  --input-color: #444444;
+  --user-icon: #888888;
+  --text-color: #ffffff;
+  --card-color: #444444;
+  --button-color: #ff0000;
+  --dropdown-hover: #333333;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--navbar-color);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 50%;
+  background-color: var(--input-color);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+}
+
+.user-icon {
+  color: var(--user-icon);
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.categories {
+  padding-right: 50px;
+}
+
+.categories i {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  color: var(--user-icon);
+  cursor: pointer;
+}
+
+.dropdown-categories {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  background-color: var(--navbar-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0 0 25px 25px;
+  width: 180px;
+  text-align: left;
+}
+
+.dropdown-categories a {
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+  color: var(--user-icon);
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-categories a:hover {
+  background-color: var(--dropdown-hover);
+  color: #ffffff;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: -15px;
+  background-color: var(--navbar-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 0 0 25px 25px;
+  width: 120px;
+  text-align: left;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+  color: var(--user-icon);
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: var(--dropdown-hover);
+  color: #ffffff;
+}
+
+.mode-toggle {
+  margin-right: 50px;
+  margin-top: 5px;
+}
+
+.mode-toggle button {
+  background-color: transparent;
+  border: none;
+}
+
+.mode-toggle i {
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.light-mode {
+  --background-color: #ffffff;
+  --navbar-color: #000000;
+  --input-color: #ffffff;
+  --card-color: #ff0000;
+  --button-color: #000000;
+  --user-icon: #888888;
+  --text-color: #000000;
+  --dropdown-hover: #333333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.menu {
+  padding: 20px 25px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center; /* Alinhar itens ao centro */
+}
+
+.list {
+  display: flex;
+  justify-content: center; /* Centralizar itens */
+  overflow-x: hidden;
+  list-style: none;
+  position: relative; /* Para posicionar os botões de seta */
+  width: 100%; /* Garantir que a lista ocupe toda a largura */
+  /* Ocultar barra de rolagem */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Explorer 10+ */
+}
+
+.list::-webkit-scrollbar {
+  /* WebKit browsers like Chrome and Safari */
+  display: none; /* Oculta a barra de rolagem */
+}
+
+.item {
+  width: 20em;
+  margin: 0 0.5em; /* Espaçamento igual à esquerda e à direita */
+  height: 27em;
+  background-color: var(--card-color);
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item img {
+  width: 12em;
+  height: 17em;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.item h3 {
+  color: var(--text-color);
+  font-size: medium;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item button {
+  padding: 10px 50px;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--button-color);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: var(--dropdown-hover);
+}
+
+/* Estilo para o botão desabilitado */
+.disabled {
+  background-color: grey; /* Cor de fundo cinza */
+  cursor: not-allowed; /* Cursor de não permitido */
+  opacity: 0.5; /* Tornar semi-transparente */
+  pointer-events: none; /* Desabilitar cliques */
+}
+
+.footer {
+  background-color: var(--navbar-color);
+  color: var(--user-icon);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  .list {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .item {
+    flex: 0 0 auto;
+    margin: 10px;
+    height: auto;
+  }
+
+  .prev-button,
+  .next-button {
+    top: 0;
+    bottom: -10px;
+    transform: translateY(0);
+  }
+
+  .prev-button {
+    left: 10px;
+  }
+
+  .next-button {
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+
+  .search-bar input {
+    width: 50%;
+    background-color: var(--input-color);
+    padding: 0.8em 7em;
+    border: none;
+    border-radius: 20px;
+  }
+
+  .dropdown-categories {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+  }
+
+  .dropdown-categories a {
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    color: var(--user-icon);
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dropdown-categories a:hover {
+    background-color: var(--dropdown-hover);
+    color: #ffffff;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: -15px;
+    background-color: var(--navbar-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0 0 25px 25px;
+    width: 100px;
+    text-align: left;
+  }
+
+  .dropdown-menu a,
+  .dropdown-menu button {
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    color: var(--user-icon);
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dropdown-menu a:hover,
+  .dropdown-menu button:hover {
+    background-color: var(--dropdown-hover);
+    color: #ffffff;
+  }
+
+  .list {
+    display: flex;
+    justify-content: flex-start; /* Centralizar itens */
+    overflow-x: scroll;
+    list-style: none;
+    padding: 0;
+    position: relative; /* Para posicionar os botões de seta */
+    width: 100%; /* Garantir que a lista ocupe toda a largura */
+    /* Ocultar barra de rolagem */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Explorer 10+ */
+  }
+
+  .item {
+    flex: 0 0 7em;
+    height: 250px;
+    background-color: var(--card-color);
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .item img {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  .item h3 {
+    color: var(--text-color);
+    font-size: medium;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item button {
+    padding: 5px 25px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    margin-top: auto;
+  }
+
+  .prev-button {
+    top: 130px;
+    left: 10px;
+  }
+
+  .next-button {
+    top: 130px;
+    right: 10px;
+  }
+}

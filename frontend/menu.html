@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,16 +31,7 @@
       <div class="categories">
         <i class="fa-solid fa-layer-group" id="list-categories"></i>
         <div class="dropdown-categories" id="dropdown-categories">
-          <a href="#animes" id="link-animes">Animes</a>
-          <a href="#comedias" id="link-comedias">Comédias</a>
-          <a href="#documentarios" id="link-documentarios">Documentários</a>
-          <a href="#drama" id="link-drama">Drama</a>
-          <a href="#fantasia" id="link-fantasia">Fantasia</a>
-          <a href="#ficcao" id="link-ficcao">Ficção Científica</a>
-          <a href="#todos" id="link-todos">Para toda a família</a>
-          <a href="#romance" id="link-romance">Romance</a>
-          <a href="#suspense" id="link-suspense">Suspense</a>
-          <a href="#terror" id="link-terror">Terror</a>
+          <!-- Categorias -->
         </div>
       </div>
       <div class="user-icon">
@@ -52,116 +43,11 @@
       </div>
     </header>
     <main class="menu" id="menu">
-      <section class="cards">
-        <h2>Para você</h2>
-        <div class="wrapper">
-          <ul class="list" id="cardList">
-            <li class="item">
-              <img src="/images/peaky-blinders.png" alt="Peaky blinders" />
-              <h3>Peaky Blinders</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/vikings.png" alt="Vikings" />
-              <h3>Vikings</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/got.png" alt="GOT" />
-              <h3>Game of Thrones</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img
-                src="/images/grindelwald.png"
-                alt="Os Crimes de Grindelwald"
-              />
-              <h3>Animais Fantásticos - Os Crimes de Grindelwad</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/hobbit.png" alt="O Hobbit" />
-              <h3>O Hobbit - A Batalha dos Cinco Exércitos</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/vingadores.png" alt="Vingadores Ultimato" />
-              <h3>Vingadores - Ultimato</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/dragonballz.png" alt="Dragon Ball Z" />
-              <h3>Dragon Ball Z</h3>
-              <button>Assistir</button>
-            </li>
-          </ul>
-          <button class="prev-button" onclick="scrollListLeft('cardList')">
-            <i class="fa-solid fa-circle-arrow-left"></i>
-          </button>
-          <button class="next-button" onclick="scrollListRight('cardList')">
-            <i class="fa-solid fa-circle-arrow-right"></i>
-          </button>
-        </div>
-      </section>
-      <section class="series" id="series">
-        <h2>Séries</h2>
-        <div class="wrapper">
-          <ul class="list" id="seriesList">
-            <li class="item">
-              <img src="/images/breakingbad.png" alt="Série Breaking Bad" />
-              <h3>Breaking Bad - Season 01</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/stranger.png" alt="Série Stranger Things" />
-              <h3>Stranger Things</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/witcher.png" alt="Série The Witcher" />
-              <h3>The Witcher</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/thelast.png" alt="Série The Last of Us" />
-              <h3>The Last Of Us</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/the100.png" alt="Série The 100" />
-              <h3>The 100</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img
-                src="/images/casadodragao.png"
-                alt="Série A Casa do Dragão"
-              />
-              <h3>A Casa do Dragão</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img
-                src="/images/aneisdopoder.png"
-                alt="Série Os Anéis do Poder"
-              />
-              <h3>Os Anéis do Poder</h3>
-              <button>Assistir</button>
-            </li>
-          </ul>
-          <button class="prev-button" onclick="scrollListLeft('seriesList')">
-            <i class="fa-solid fa-circle-arrow-left"></i>
-          </button>
-          <button class="next-button" onclick="scrollListRight('seriesList')">
-            <i class="fa-solid fa-circle-arrow-right"></i>
-          </button>
-        </div>
-      </section>
       <section class="filmes" id="filmes">
         <h2>Filmes</h2>
         <div class="wrapper">
           <ul class="list" id="filmesList">
-            <!--Os filmes serão carregados aqui-->
+            <!-- li Filmes -->
           </ul>
           <button class="prev-button" onclick="scrollListLeft('filmesList')">
             <i class="fa-solid fa-circle-arrow-left"></i>
@@ -171,45 +57,25 @@
           </button>
         </div>
       </section>
-      <section class="animes" id="animes">
-        <h2>Animes</h2>
+      <section class="acao" id="1">
+        <h2>Ação</h2>
+        <div class="wrapper">
+          <ul class="list" id="acaoList">
+            <!-- li Ação -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('acaoList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('acaoList')">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="animes" id="2">
+        <h2>Anime</h2>
         <div class="wrapper">
           <ul class="list" id="animesList">
-            <li class="item">
-              <img src="/images/naruto.png" alt="Naruto" />
-              <h3>Naruto</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/naruto-shippuden.png" alt="Naruto Shippuden" />
-              <h3>Naruto Shippuden</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/boruto.png" alt="Boruto" />
-              <h3>Boruto</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/demon-slayer.png" alt="Demon Slayer" />
-              <h3>Demon Slayer</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/dragonballz.png" alt="Dragon Ball Z" />
-              <h3>Dragon Ball Z</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/dragonball-gt.png" alt="Dragon Ball GT" />
-              <h3>Dragon Ball GT</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/dragonball-super.png" alt="Dragon Ball Super" />
-              <h3>Dragon Ball Super</h3>
-              <button>Assistir</button>
-            </li>
+            <!-- li Animes -->
           </ul>
           <button class="prev-button" onclick="scrollListLeft('animesList')">
             <i class="fa-solid fa-circle-arrow-left"></i>
@@ -219,48 +85,11 @@
           </button>
         </div>
       </section>
-      <section class="comedias" id="comedias">
-        <h2>Comédias</h2>
+      <section class="comedia" id="3">
+        <h2>Comédia</h2>
         <div class="wrapper">
           <ul class="list" id="comediaList">
-            <li class="item">
-              <img
-                src="/images/auto-compadecida.png"
-                alt="Auto da Compadecida"
-              />
-              <h3>O Auto da Compadecida</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/anjos-lei.png" alt="Anjos da Lei" />
-              <h3>Anjos da Lei</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/se-beber.png" alt="Se Beber Não Case" />
-              <h3>Se Beber Não Case</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/branquelas.png" alt="As Branquelas" />
-              <h3>As Branquelas</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/super-heroi.png" alt="Super Herói - O Filme" />
-              <h3>Super Herói - O Filmes</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/ace-ventura.png" alt="Ace Ventura" />
-              <h3>Ace Ventura</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="/images/gente-grande.png" alt="Gente Grande" />
-              <h3>Gente Grande</h3>
-              <button>Assistir</button>
-            </li>
+            <!-- li Comédias -->
           </ul>
           <button class="prev-button" onclick="scrollListLeft('comediaList')">
             <i class="fa-solid fa-circle-arrow-left"></i>
@@ -270,45 +99,11 @@
           </button>
         </div>
       </section>
-      <section class="documentarios" id="documentarios">
-        <h2>Documentários</h2>
+      <section class="documentario" id="4">
+        <h2>Documentário</h2>
         <div class="wrapper">
           <ul class="list" id="documentarioList">
-            <li class="item">
-              <img src="images/pele.png" alt="Pelé" />
-              <h3>Pelé</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="images/jupiter.png" alt="The Júpiter Enigma" />
-              <h3>The Jupiter Enigma</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="images/espaco.png" alt="Return to Espace" />
-              <h3>Return to Espace</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="images/bolt.png" alt="I am Bolt" />
-              <h3>I am Bolt</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="images/amazonia.png" alt="Amazônia Eterna" />
-              <h3>Amazônia Eterna</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="images/ufo.png" alt="UFO" />
-              <h3>UFO - A História Secreta</h3>
-              <button>Assistir</button>
-            </li>
-            <li class="item">
-              <img src="images/nasa.png" alt="Nasa - Unexplained Files" />
-              <h3>NASA - Unexplained Files</h3>
-              <button>Assistir</button>
-            </li>
+            <!-- li Documentários -->
           </ul>
           <button
             class="prev-button"
@@ -320,6 +115,68 @@
             class="next-button"
             onclick="scrollListRight('documentarioList')"
           >
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="drama" id="5">
+        <h2>Drama</h2>
+        <div class="wrapper">
+          <ul class="list" id="dramaList">
+            <!-- li Drama -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('dramaList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('dramaList')">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="fantasia" id="6">
+        <h2>Fantasia</h2>
+        <div class="wrapper">
+          <ul class="list" id="fantasiaList">
+            <!-- li Fantasia -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('fantasiaList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('fantasiaList')">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="ficcaoCientifica" id="7">
+        <h2>Ficção Científica</h2>
+        <div class="wrapper">
+          <ul class="list" id="ficcaoCientificaList">
+            <!-- li Ficção Científica -->
+          </ul>
+          <button
+            class="prev-button"
+            onclick="scrollListLeft('ficcaoCientificaList')"
+          >
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button
+            class="next-button"
+            onclick="scrollListRight('ficcaoCientificaList')"
+          >
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="familia" id="8">
+        <h2>Para toda a família</h2>
+        <div class="wrapper">
+          <ul class="list" id="familiaList">
+            <!-- li Família -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('familiaList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('familiaList')">
             <i class="fa-solid fa-circle-arrow-right"></i>
           </button>
         </div>
