@@ -11,17 +11,23 @@ public class MovieEntity extends Content {
     private Long id;
     private Integer duration;
 
+    @ManyToOne
+    @JoinColumn(name = "genre_id")
+    private GenreEntity genre;
+
     public MovieEntity() {}
 
-    public MovieEntity(Long id, Integer duration) {
+    public MovieEntity(Long id, Integer duration, GenreEntity genre) {
         this.id = id;
         this.duration = duration;
+        this.genre = genre;
     }
 
-    public MovieEntity(String imgUrl, String title, String description, Long id, Integer duration) {
+    public MovieEntity(String imgUrl, String title, String description, Long id, Integer duration, GenreEntity genre) {
         super(imgUrl, title, description);
         this.id = id;
         this.duration = duration;
+        this.genre = genre;
     }
 
     public Long getId() {
@@ -38,5 +44,13 @@ public class MovieEntity extends Content {
 
     public void setDuration(Integer duration) {
         this.duration = duration;
+    }
+
+    public GenreEntity getGenre() {
+        return genre;
+    }
+
+    public void setGenre(GenreEntity genre) {
+        this.genre = genre;
     }
 }
