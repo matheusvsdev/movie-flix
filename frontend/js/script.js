@@ -161,8 +161,8 @@ function loadMovies(
   nextButton
 ) {
   const url = categoryId
-    ? `http://localhost:8080/list/${categoryId}?page=${page}&size=${pageSize}`
-    : `http://localhost:8080/list?page=${page}&size=${pageSize}`;
+    ? `http://localhost:8080/movies?categoryId=${categoryId}&page=${page}&size=${pageSize}`
+    : `http://localhost:8080/movies?page=${page}&size=${pageSize}`;
 
   console.log(`Loading movies from URL: ${url}`);
 
@@ -270,3 +270,61 @@ function updateNavigationButtons(
     nextButton.classList.remove("disabled");
   }
 }
+
+// Adiciona um evento de click ao ícone da lupa
+document.getElementById("magnifying-glass").addEventListener("click", function () {
+    // Esconde todas as seções
+    document.querySelectorAll("section").forEach(function (section) {
+      section.style.display = "none";
+    });
+  
+    // Cria a seção de resultados da pesquisa se ela não existir
+    let searchSection = document.getElementById("search-results");
+    if (!searchSection) {
+      searchSection = document.createElement("section");
+      searchSection.id = "search-results";
+      searchSection.innerHTML = `
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Pesquisar..." />
+        </div>
+        <ul id="search-results-list" class="list"></ul>
+      `;
+      document.querySelector("main").appendChild(searchSection);
+    }
+  
+    // Mostra a seção de resultados da pesquisa
+    searchSection.style.display = "block";
+  
+    // Adiciona um evento de keyup ao input de pesquisa
+    document.getElementById("search-input").addEventListener("keyup", function () {
+      searchMovies();
+    });
+  });
+  
+  // Função que faz a requisição ao endpoint de pesquisa e exibe os resultados
+  function searchMovies() {
+    const searchInput = document.getElementById("search-input");
+    const searchQuery = searchInput.value.trim();
+    if (searchQuery === "") return;
+  
+    const url = `http://localhost:8080/movies?title=${searchQuery}&page=0&size=4`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        const searchResultsList = document.getElementById("search-results-list");
+        searchResultsList.innerHTML = "";
+  
+        data.content.forEach((movie) => {
+          const li = document.createElement("li");
+          li.className = "item";
+          li.innerHTML = `
+            <img src="${movie.imgUrl}" alt="${movie.title}" />
+            <h3>${movie.title}</h3>
+            <button>Assistir</button>
+          `;
+          searchResultsList.appendChild(li);
+        });
+      })
+      .catch((error) => console.error("Erro ao pesquisar filmes:", error));
+  }
+  
