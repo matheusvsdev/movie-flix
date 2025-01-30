@@ -18,15 +18,8 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<MovieDTO> findMovies(Pageable pageable) {
-        Page<MovieEntity> result = movieRepository.findMovies(pageable);
-        return result.map(MovieDTO::new);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<MovieDTO> findMoviesByCategory(Long categoryId, Pageable pageable) {
-        Page<MovieEntity> result = movieRepository.findMovieByCategoryId(categoryId, pageable);
+    public Page<MovieDTO> findMoviesByCategoryAndTitle(Long categoryId, String title, Pageable pageable) {
+        Page<MovieEntity> result = movieRepository.findMoviesByCategoryAndTitle(categoryId, title, pageable);
         return result.map(MovieDTO::new);
     }
 }

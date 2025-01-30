@@ -12,12 +12,13 @@ import org.springframework.stereotype.Repository;
 public interface MovieRepository extends JpaRepository<MovieEntity, Long> {
 
     @Query("""
-            SELECT m FROM MovieEntity m ORDER BY m.title
+            SELECT m FROM MovieEntity m
+            JOIN m.genre g
+            WHERE (:categoryId IS NULL OR g.id = :categoryId)
+            AND (:title IS NULL OR LOWER(m.title) LIKE LOWER(CONCAT('%', :title, '%')))
+            ORDER BY m.title
             """)
-    Page<MovieEntity> findMovies(Pageable pageable);
-
-    @Query("""
-            SELECT m FROM MovieEntity m JOIN m.genre g WHERE g.id = :categoryId
-            """)
-    Page<MovieEntity> findMovieByCategoryId(@Param("categoryId") Long categoryId, Pageable pageable);
+    Page<MovieEntity> findMoviesByCategoryAndTitle(@Param("categoryId") Long categoryId,
+                                                   @Param("title") String title,
+                                                   Pageable pageable);
 }
