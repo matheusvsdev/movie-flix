@@ -20,6 +20,9 @@ public class GenreEntity {
     @OneToMany(mappedBy = "genre")
     private List<MovieEntity> movies = new ArrayList<>();
 
+    @OneToMany(mappedBy = "genre")
+    private List<SerieEntity> series = new ArrayList<>();
+
     public GenreEntity() {
     }
 
@@ -42,5 +45,9 @@ public class GenreEntity {
 
     public List<MovieEntity> getMovies() {
         return movies;
+    }
+
+    public List<SerieEntity> getSeries() {
+        return series;
     }
 }

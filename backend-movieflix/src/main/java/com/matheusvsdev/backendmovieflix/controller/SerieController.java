@@ -1,7 +1,7 @@
 package com.matheusvsdev.backendmovieflix.controller;
 
-import com.matheusvsdev.backendmovieflix.dto.MovieDTO;
-import com.matheusvsdev.backendmovieflix.service.MovieService;
+import com.matheusvsdev.backendmovieflix.dto.SerieDTO;
+import com.matheusvsdev.backendmovieflix.service.SerieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -12,19 +12,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MovieController {
+public class SerieController {
 
     @Autowired
-    private MovieService movieService;
+    private SerieService serieService;
 
-    @GetMapping(value = "/movies")
-    public ResponseEntity<Page<MovieDTO>> findMoviesByCategoryIdAndTitle(
+    @GetMapping(value = "/series")
+    public ResponseEntity<Page<SerieDTO>> findSeriesByCategoryIdAndTitle(
             @RequestParam(value = "categoryId", required = false) Long categoryId,
             @RequestParam(value = "title", required = false) String title,
             @RequestParam(value = "page", defaultValue = "0") int page,
             @RequestParam(value = "size", defaultValue = "5") int size) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<MovieDTO> result = movieService.findMoviesByCategoryAndTitle(categoryId, title, pageable);
+        Page<SerieDTO> result = serieService.findSeriesByCategoryAndTitle(categoryId, title, pageable);
         return ResponseEntity.ok(result);
     }
 }

@@ -1,33 +1,34 @@
 package com.matheusvsdev.backendmovieflix.dto;
 
-import com.matheusvsdev.backendmovieflix.entities.MovieEntity;
+import com.matheusvsdev.backendmovieflix.entities.SerieEntity;
 
-public class MovieDTO {
+public class SerieDTO {
 
     private Long id;
     private String imgUrl;
     private String title;
     private String description;
-    private Integer duration;
+    private Integer numberOfSeasons;
     private Long genreId;
 
-    public MovieDTO() {}
+    public SerieDTO() {
+    }
 
-    public MovieDTO(Long id, String imgUrl, String title, String description, Integer duration, Long genreId) {
+    public SerieDTO(Long id, String imgUrl, String title, String description, Integer numberOfSeasons, Long genreId) {
         this.id = id;
         this.imgUrl = imgUrl;
         this.title = title;
         this.description = description;
-        this.duration = duration;
+        this.numberOfSeasons = numberOfSeasons;
         this.genreId = genreId;
     }
 
-    public MovieDTO(MovieEntity entity) {
+    public SerieDTO(SerieEntity entity) {
         this.id = entity.getId();
         this.imgUrl = entity.getImgUrl();
         this.title = entity.getTitle();
         this.description = entity.getDescription();
-        this.duration = entity.getDuration();
+        this.numberOfSeasons = entity.getNumberOfSeasons();
         this.genreId = entity.getGenre().getId();
     }
 
@@ -47,8 +48,8 @@ public class MovieDTO {
         return description;
     }
 
-    public Integer getDuration() {
-        return duration;
+    public Integer getNumberOfSeasons() {
+        return numberOfSeasons;
     }
 
     public Long getGenreId() {

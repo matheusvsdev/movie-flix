@@ -7,6 +7,8 @@ INSERT INTO tb_genre(description) VALUES ('FANTASY');
 INSERT INTO tb_genre(description) VALUES ('SCIENCE_FICTION');
 INSERT INTO tb_genre(description) VALUES ('FAMILY');
 
+/* ---- Filmes ---- */
+
 /* ACTION */
 
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://assets.cinebelasartes.com.br/wp-content/uploads/2022/11/Mad-Max-Estrada-da-Furi-600x855-min.jpeg', 'Mad Max: Estrada da Fúria', '', 120, 1);
@@ -19,19 +21,6 @@ INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/2/22/OsVingadores2.jpg', 'Vingadores: Era de Ultron', '', 141, 1);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/59/The_Lord_of_the_Rings_The_Two_Towers.jpg', 'O Senhor dos Anéis: As Duas Torres', '', 179, 1);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/ooMpCgZK3ftSd8b5z8pob30iilVw2sUf6V9DQoWPRd4UlvWhT-PJIJMgJEojH3WjTXt4srbfzUuEYu72J-Q', 'O Poderoso Chefão', '', 177, 1);
-
-/* ANIME */
-
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/d/d8/Akira_pôster.jpg', 'Akira', '', 124, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://media.fstatic.com/QfiNk3fdZDiCnVx-HnV0ls1v4tA=/322x478/smart/filters:format(webp)/media/movies/covers/2014/11/dragon-ball-z-filme-10-broly-o-retorno-do-guerreiro-lendario_t15713_3.jpg', 'Dragon Ball Z: O Retorno de Broly', '', 92, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://criticalhits.com.br/wp-content/uploads/2019/04/naruto-1166548.jpeg', 'Naruto: O Filme', '', 95, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdfk5qT93awjsZQ7MNqCC4O0n89s0QeF7YP7Ve8LbcDVhSwYcNbhxewd4II_vnahp46hY&usqp=CAU', 'One Piece: O Filme', '', 90, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/1c/Mewtwo_Contra-Ataca.jpg', 'Pokémon: O Filme', '', 85, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://ogden_images.s3.amazonaws.com/www.lockhaven.com/images/2020/09/23170417/Spirited-poster-555x840.jpg', 'Spirited Away', '', 125, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUnLvzuZhzePzSip7kDOwUrr7Q7JReJOx8jQ&s', 'Your Name', '', 112, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://uploads.jovemnerd.com.br/wp-content/uploads/2022/03/Fullmetal-Alchemist-2-e1646167425710.jpg', 'Fullmetal Alchemist: O Filme', '', 105, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/51/Death_Note_%28filme_de_2006%29_-_Poster.jpg', 'Death Note: O Filme', '', 126, 2);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images.justwatch.com/poster/98202593/s718/bleach.jpg', 'Bleach: O Filme', '', 92, 2);
 
 /* COMEDY */
 
@@ -110,3 +99,31 @@ INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/4/40/The_Grinch_%282018_film%29.png', 'O Grinch', '', 105, 8);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBjXgJZQSzG_pKmnupPvVI04SRyAKi-RkvSQ&s', 'Shrek', '', 90, 8);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/7/75/Monsters_Inc.jpg', 'Monstros S.A.', '', 92, 8);
+
+/* ---- Séries ---- */
+
+/* ACTION */
+
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://br.web.img3.acsta.net/pictures/20/02/19/19/58/0350732.jpg', 'Arcanjo Renegado', '', 3, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52XJBLiSOWLS9MtzA77ngBkPkCLi3DlmyUIPMx7C3LB33Gyj2m0n5f-ew9Z-xNEj2rdU&usqp=CAU', 'Cobra Kai', '', 6, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://images.justwatch.com/poster/192399143/s718/maquina-mortifera.jpg', 'Máquina Mortífera', '', 3, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/6/6e/The_Gentlemen_%282024_TV_series%29.jpg', 'Magnatas do Crime', '', 1, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://images.justwatch.com/poster/261932598/s718/s-w-a-t-forca-de-intervencao.jpg', 'S.W.A.T. - Força de Intervenção', '', 5, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://bancodeseries.com.br/images/posters/18962.jpg', 'Outer Banks', '', 4, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://br.web.img3.acsta.net/img/a2/a4/a2a43a6afebc29908985d9a5287c8db1.jpg', 'O Ringue', '', 5, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://image.tmdb.org/t/p/original/7RPWQw4YfKQHFwnJXi7ZdfoE5vZ.jpg', 'Troia - A Queda de uma Cidade', '', 8, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14020271_b_v8_ac.jpg', 'El Chapo', '', 3, 1);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/474x/9a/75/05/9a7505bcf836c8d58240704c48586fd5.jpg', 'Frontier', '', 3, 1);
+
+/* ANIME */
+
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://bigcartoon.org/images/thumb/a/ab/5568ffb263f6bcba85a639980b80dd9a1612993223_main.jpg/324px-5568ffb263f6bcba85a639980b80dd9a1612993223_main.jpg', 'Naruto', '', 9, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/736x/0e/e6/53/0ee6535892f2c0a7e7bc6e2c43e60dae.jpg', 'Dragon Ball Z', '', 9, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://http2.mlstatic.com/D_NQ_NP_674972-CBT75875300820_042024-O.webp', 'Naruto Shippuden', '', 13, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://preview.redd.it/what-did-the-people-of-1997-thought-about-one-piece-when-v0-2wvkj50zn2t81.png?width=640&crop=smart&auto=webp&s=51a82a50dda6eb108b3c4a9d8093d6c154deaa87', 'One Piece', '', 20, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/474x/67/bc/36/67bc36fe4a5ad62a59b03059b58f57a1.jpg', 'Pokémon', '', 27, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://preview.redd.it/l2icux1p4jsc1.jpeg?width=640&crop=smart&auto=webp&s=50775a773b73dfbdc2d50e77c28f045d813120e2', 'Death Note', '', 1, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://5.imimg.com/data5/ANDROID/Default/2022/12/UW/IA/MN/15232517/product-jpeg-500x500.jpg', 'Demon Slayer', '', 4, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/736x/d4/d9/a0/d4d9a00b920f5a59d3001e6b6011d22b.jpg', 'YU-GI-OH!', '', 5, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/originals/93/f0/60/93f060ad38a832119cf67a5e82170582.jpg', 'Digimon', '', 7, 2);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/originals/e8/7b/1b/e87b1bf0b5596c09a3f5c2d0796a6ba6.jpg', 'Bleach', '', 16, 2);
