@@ -39,6 +39,12 @@ body {
   height: 40px;
 }
 
+.categories a {
+  padding: 0 10px;
+  text-decoration: none;
+  color: var(--user-icon);
+}
+
 .search-bar {
   flex-grow: 1;
   text-align: center;

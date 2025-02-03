@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="images/icon.png" type="image/png" />
+    <title>MovieFlix</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="menu.html">
+          <img src="/images/FLIX.png" alt="logo" />
+        </a>
+      </div>
+      <div class="categories">
+        <i class="fa-solid fa-layer-group" id="list-categories"></i>
+        <div class="dropdown-categories" id="dropdown-categories">
+          <!-- Gêneros -->
+        </div>
+      </div>
+      <div class="magnifying-glass">
+        <i class="fa-solid fa-magnifying-glass" id="magnifying-glass"></i>
+      </div>
+      <div class="user-icon">
+        <i class="fa-solid fa-user" id="user-icon"></i>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <a href="#">Meu perfil</a>
+          <a href="#">Sair</a>
+        </div>
+      </div>
+      <div class="mode-toggle">
+        <button id="light-mode-toggle">
+          <i class="fa-solid fa-toggle-off"></i>
+        </button>
+      </div>
+    </header>
+    <main class="menu" id="menu">
+      <section class="filmes" id="filmes">
+        <h2>Filmes</h2>
+        <div class="wrapper">
+          <ul class="list" id="filmesList">
+            <!-- li Filmes -->
+          </ul>
+          <button class="prev-button">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="acao" id="1">
+        <h2>Ação</h2>
+        <div class="wrapper">
+          <ul class="list" id="acaoList">
+            <!-- li Ação -->
+          </ul>
+          <button class="prev-button">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="comedia" id="3">
+        <h2>Comédia</h2>
+        <div class="wrapper">
+          <ul class="list" id="comediaList">
+            <!-- li Comédias -->
+          </ul>
+          <button class="prev-button">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="documentario" id="4">
+        <h2>Documentário</h2>
+        <div class="wrapper">
+          <ul class="list" id="documentarioList">
+            <!-- li Documentários -->
+          </ul>
+          <button class="prev-button">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="drama" id="5">
+        <h2>Drama</h2>
+        <div class="wrapper">
+          <ul class="list" id="dramaList">
+            <!-- li Drama -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('dramaList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('dramaList')">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="fantasia" id="6">
+        <h2>Fantasia</h2>
+        <div class="wrapper">
+          <ul class="list" id="fantasiaList">
+            <!-- li Fantasia -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('fantasiaList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('fantasiaList')">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="ficcaoCientifica" id="7">
+        <h2>Ficção Científica</h2>
+        <div class="wrapper">
+          <ul class="list" id="ficcaoCientificaList">
+            <!-- li Ficção Científica -->
+          </ul>
+          <button
+            class="prev-button"
+            onclick="scrollListLeft('ficcaoCientificaList')"
+          >
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button
+            class="next-button"
+            onclick="scrollListRight('ficcaoCientificaList')"
+          >
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="familia" id="8">
+        <h2>Para toda a família</h2>
+        <div class="wrapper">
+          <ul class="list" id="familiaList">
+            <!-- li Família -->
+          </ul>
+          <button class="prev-button" onclick="scrollListLeft('familiaList')">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button" onclick="scrollListRight('familiaList')">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2025 MovieFlix. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/filmes.js"></script>
+  </body>
+</html>

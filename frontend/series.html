@@ -22,9 +22,10 @@
         </a>
       </div>
       <div class="categories">
-        <i class="fa-solid fa-layer-group" id="list-categories" style="display: none;"></i>
-        <a href="series.html">Séries</a>
-        <a href="filmes.html">Filmes</a>
+        <i class="fa-solid fa-layer-group" id="list-categories"></i>
+        <div class="dropdown-categories" id="dropdown-categories">
+          <!-- Gêneros -->
+        </div>
       </div>
       <div class="magnifying-glass">
         <i class="fa-solid fa-magnifying-glass" id="magnifying-glass"></i>
@@ -43,25 +44,11 @@
       </div>
     </header>
     <main class="menu" id="menu">
-      <section class="filmes" id="filmes">
-        <h2>Filmes</h2>
-        <div class="wrapper">
-          <ul class="list" id="filmesList">
-            <!-- li Filmes -->
-          </ul>
-          <button class="prev-button">
-            <i class="fa-solid fa-circle-arrow-left"></i>
-          </button>
-          <button class="next-button">
-            <i class="fa-solid fa-circle-arrow-right"></i>
-          </button>
-        </div>
-      </section>
       <section class="series" id="series">
         <h2>Séries e Animes</h2>
         <div class="wrapper">
           <ul class="list" id="seriesList">
-            <!-- li Filmes -->
+            <!-- li Séries -->
           </ul>
           <button class="prev-button">
             <i class="fa-solid fa-circle-arrow-left"></i>
@@ -71,16 +58,30 @@
           </button>
         </div>
       </section>
-      <section class="familia" id="8">
-        <h2>Para toda a família</h2>
+      <section class="acao" id="1">
+        <h2>Ação</h2>
         <div class="wrapper">
-          <ul class="list" id="familiaList">
-            <!-- li Família -->
+          <ul class="list" id="acaoList">
+            <!-- li Ação -->
           </ul>
-          <button class="prev-button" onclick="scrollListLeft('familiaList')">
+          <button class="prev-button">
             <i class="fa-solid fa-circle-arrow-left"></i>
           </button>
-          <button class="next-button" onclick="scrollListRight('familiaList')">
+          <button class="next-button">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="animes" id="2">
+        <h2>Animes</h2>
+        <div class="wrapper">
+          <ul class="list" id="animesList">
+            <!-- li Animes -->
+          </ul>
+          <button class="prev-button">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+          </button>
+          <button class="next-button">
             <i class="fa-solid fa-circle-arrow-right"></i>
           </button>
         </div>
@@ -89,6 +90,6 @@
     <footer class="footer">
       <p>&copy; 2025 MovieFlix. Todos os direitos reservados.</p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/series.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
 // Constantes para URLs
-const URL_FILMES = "http://localhost:8080/movies";
 const URL_SERIES = "http://localhost:8080/series";
 const URL_CATEGORIAS = "http://localhost:8080/genres";
 
@@ -85,7 +84,7 @@ function initializeCategoryLinks() {
       targetElement.scrollIntoView({ behavior: "smooth" });
 
       // Fecha o dropdown após a navegação
-      const dropdownCategories = document.getElementById("dropdown-genres");
+      const dropdownCategories = document.getElementById("dropdown-categories");
       dropdownCategories.style.display = "none";
     });
   });
@@ -102,49 +101,8 @@ async function fetchCategories() {
     link.href = `#${index + 1}`; // Usamos o índice + 1 para corresponder aos IDs numéricos das seções
     link.id = `link-${index + 1}`;
     link.textContent = category.description;
+    dropdown.appendChild(link);
   });
-}
-
-// Carrega filmes de uma categoria específica ou todos os filmes se categoryId for nulo
-function carregarFilmes(
-  section,
-  categoryId,
-  page,
-  pageSize,
-  listId,
-  prevButton,
-  nextButton
-) {
-  const url = categoryId
-    ? `${URL_FILMES}?categoryId=${categoryId}&page=${page}&size=${pageSize}`
-    : `${URL_FILMES}?page=${page}&size=${pageSize}`;
-
-  console.log(`Loading movies from URL: ${url}`);
-
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const filmesList = document.getElementById(listId);
-      filmesList.innerHTML = ""; // Limpa a lista atual
-
-      data.content.forEach((movie) => {
-        const li = document.createElement("li");
-        li.className = "item";
-        li.innerHTML = `
-                    <img src="${movie.imgUrl}" alt="${movie.title}" />
-                    <h3>${movie.title}</h3>
-                    <button>Assistir</button>
-                  `;
-        filmesList.appendChild(li);
-      });
-
-      // Atualiza o total de páginas no elemento section
-      section.dataset.totalPages = data.totalPages;
-      console.log(`Total Pages: ${data.totalPages}`);
-
-      updateNavigationButtons(prevButton, nextButton, page, data.totalPages); // Atualiza os botões de navegação
-    })
-    .catch((error) => console.error("Erro ao carregar filmes:", error));
 }
 
 // Carrega séries de uma categoria específica ou todas as séries se categoryId for nulo
@@ -189,59 +147,9 @@ function carregarSeries(
     .catch((error) => console.error("Erro ao carregar séries:", error));
 }
 
-// Inicializa as seções de filmes
-function initializeMovieSections() {
-  const sections = document.querySelectorAll("section:not(.series)");
-
-  sections.forEach((section) => {
-    const categoryId = section.id === "filmes" ? null : section.id; // Verifica se é a seção de "Filmes"
-    const listId = section.querySelector("ul").id;
-    const prevButton = section.querySelector(".prev-button");
-    const nextButton = section.querySelector(".next-button");
-
-    // Armazena a página atual e total de páginas no elemento section
-    section.dataset.currentPage = 0;
-    section.dataset.totalPages = 0;
-
-    const pageSize = 5; // Mostra 5 filmes por página
-
-    carregarFilmes(
-      section,
-      categoryId,
-      0,
-      pageSize,
-      listId,
-      prevButton,
-      nextButton
-    );
-
-    prevButton.addEventListener("click", () => {
-      scrollListLeft(
-        section,
-        categoryId,
-        listId,
-        pageSize,
-        prevButton,
-        nextButton
-      );
-    });
-
-    nextButton.addEventListener("click", () => {
-      scrollListRight(
-        section,
-        categoryId,
-        listId,
-        pageSize,
-        prevButton,
-        nextButton
-      );
-    });
-  });
-}
-
-// Inicializa as seções de filmes
+// Inicializa as seções de séries
 function initializeSerieSections() {
-  const sections = document.querySelectorAll("section.series");
+  const sections = document.querySelectorAll("section");
 
   sections.forEach((section) => {
     const categoryId = section.id === "series" ? null : section.id; // Verifica se é a seção de "Filmes"
@@ -310,27 +218,15 @@ function scrollListLeft(
 
   section.dataset.currentPage = currentPage;
 
-  if (section.classList.contains("series")) {
-    carregarSeries(
-      section,
-      categoryId,
-      currentPage,
-      pageSize,
-      listId,
-      prevButton,
-      nextButton
-    );
-  } else {
-    carregarFilmes(
-      section,
-      categoryId,
-      currentPage,
-      pageSize,
-      listId,
-      prevButton,
-      nextButton
-    );
-  }
+  carregarSeries(
+    section,
+    categoryId,
+    currentPage,
+    pageSize,
+    listId,
+    prevButton,
+    nextButton
+  );
 }
 
 // Scroll para a direita
@@ -354,27 +250,15 @@ function scrollListRight(
 
   section.dataset.currentPage = currentPage;
 
-  if (section.classList.contains("series")) {
-    carregarSeries(
-      section,
-      categoryId,
-      currentPage,
-      pageSize,
-      listId,
-      prevButton,
-      nextButton
-    );
-  } else {
-    carregarFilmes(
-      section,
-      categoryId,
-      currentPage,
-      pageSize,
-      listId,
-      prevButton,
-      nextButton
-    );
-  }
+  carregarSeries(
+    section,
+    categoryId,
+    currentPage,
+    pageSize,
+    listId,
+    prevButton,
+    nextButton
+  );
 }
 
 // Atualiza os botões de navegação
@@ -427,37 +311,9 @@ document
     document
       .getElementById("search-input")
       .addEventListener("keyup", function () {
-        searchMovies();
         searchSeries();
       });
   });
-
-// Função que faz a requisição ao endpoint de pesquisa e exibe os resultados
-function searchMovies() {
-  const searchInput = document.getElementById("search-input");
-  const searchQuery = searchInput.value.trim();
-  if (searchQuery === "") return;
-
-  const url = `${URL_FILMES}?title=${searchQuery}&page=0&size=4`;
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      const searchResultsList = document.getElementById("search-results-list");
-      searchResultsList.innerHTML = "";
-
-      data.content.forEach((movie) => {
-        const li = document.createElement("li");
-        li.className = "item";
-        li.innerHTML = `
-            <img src="${movie.imgUrl}" alt="${movie.title}" />
-            <h3>${movie.title}</h3>
-            <button>Assistir</button>
-          `;
-        searchResultsList.appendChild(li);
-      });
-    })
-    .catch((error) => console.error("Erro ao pesquisar filmes:", error));
-}
 
 // Função que faz a requisição ao endpoint de pesquisa e exibe os resultados
 function searchSeries() {
@@ -495,7 +351,6 @@ isBackendAvailable().then((available) => {
     initializeDarkModeToggle();
     initializeCategoryLinks();
     fetchCategories();
-    initializeMovieSections();
     initializeSerieSections();
   } else {
     // Esconde todas as seções e os botões de navegação
