@@ -7,17 +7,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "/movies")
 public class MovieController {
 
     @Autowired
     private MovieService movieService;
 
-    @GetMapping(value = "/movies")
+    @GetMapping
     public ResponseEntity<Page<MovieDTO>> findMoviesByCategoryIdAndTitle(
             @RequestParam(value = "categoryId", required = false) Long categoryId,
             @RequestParam(value = "title", required = false) String title,
@@ -25,6 +24,12 @@ public class MovieController {
             @RequestParam(value = "size", defaultValue = "5") int size) {
         Pageable pageable = PageRequest.of(page, size);
         Page<MovieDTO> result = movieService.findMoviesByCategoryAndTitle(categoryId, title, pageable);
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<MovieDTO> findMovieById(@PathVariable Long id) {
+        MovieDTO result = movieService.findMovieById(id);
         return ResponseEntity.ok(result);
     }
 }

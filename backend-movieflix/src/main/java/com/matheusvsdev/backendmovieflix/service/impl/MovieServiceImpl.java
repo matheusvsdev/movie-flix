@@ -22,4 +22,11 @@ public class MovieServiceImpl implements MovieService {
         Page<MovieEntity> result = movieRepository.findMoviesByCategoryAndTitle(categoryId, title, pageable);
         return result.map(MovieDTO::new);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public MovieDTO findMovieById(Long id) {
+        MovieEntity movie = movieRepository.findById(id).orElseThrow(() -> new RuntimeException("Movie not found"));
+        return new MovieDTO(movie);
+    }
 }

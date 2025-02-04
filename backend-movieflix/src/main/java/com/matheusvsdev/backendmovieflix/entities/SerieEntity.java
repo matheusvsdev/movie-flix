@@ -29,8 +29,8 @@ public class SerieEntity extends Content {
         this.genre = genre;
     }
 
-    public SerieEntity(String imgUrl, String title, String description, Long id, Integer numberOfSeasons, GenreEntity genre) {
-        super(imgUrl, title, description);
+    public SerieEntity(String imgUrl, String title, String description, String videoUrl, Long id, Integer numberOfSeasons, GenreEntity genre) {
+        super(imgUrl, title, description, videoUrl);
         this.id = id;
         this.numberOfSeasons = numberOfSeasons;
         this.genre = genre;

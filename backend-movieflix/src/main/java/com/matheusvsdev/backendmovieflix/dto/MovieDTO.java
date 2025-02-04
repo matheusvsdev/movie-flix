@@ -9,16 +9,18 @@ public class MovieDTO {
     private String title;
     private String description;
     private Integer duration;
+    private String videoUrl;
     private Long genreId;
 
     public MovieDTO() {}
 
-    public MovieDTO(Long id, String imgUrl, String title, String description, Integer duration, Long genreId) {
+    public MovieDTO(Long id, String imgUrl, String title, String description, Integer duration, String videoUrl,Long genreId) {
         this.id = id;
         this.imgUrl = imgUrl;
         this.title = title;
         this.description = description;
         this.duration = duration;
+        this.videoUrl = videoUrl;
         this.genreId = genreId;
     }
 
@@ -28,6 +30,7 @@ public class MovieDTO {
         this.title = entity.getTitle();
         this.description = entity.getDescription();
         this.duration = entity.getDuration();
+        this.videoUrl = entity.getVideoUrl();
         this.genreId = entity.getGenre().getId();
     }
 
@@ -49,6 +52,10 @@ public class MovieDTO {
 
     public Integer getDuration() {
         return duration;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
     public Long getGenreId() {

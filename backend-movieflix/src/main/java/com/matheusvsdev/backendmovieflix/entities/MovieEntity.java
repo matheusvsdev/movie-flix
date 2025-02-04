@@ -23,8 +23,8 @@ public class MovieEntity extends Content {
         this.genre = genre;
     }
 
-    public MovieEntity(String imgUrl, String title, String description, Long id, Integer duration, GenreEntity genre) {
-        super(imgUrl, title, description);
+    public MovieEntity(String imgUrl, String title, String description, String videoUrl, Long id, Integer duration, GenreEntity genre) {
+        super(imgUrl, title, description, videoUrl);
         this.id = id;
         this.duration = duration;
         this.genre = genre;

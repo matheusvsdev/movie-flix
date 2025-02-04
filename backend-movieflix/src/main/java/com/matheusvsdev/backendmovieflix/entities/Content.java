@@ -7,14 +7,16 @@ public abstract class Content {
     private String imgUrl;
     private String title;
     private String description;
+    private String videoUrl;
 
     public Content() {
     }
 
-    public Content(String imgUrl, String title, String description) {
+    public Content(String imgUrl, String title, String description, String videoUrl) {
         this.imgUrl = imgUrl;
         this.title = title;
         this.description = description;
+        this.videoUrl = videoUrl;
     }
 
     public String getImgUrl() {
@@ -39,5 +41,13 @@ public abstract class Content {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
 }

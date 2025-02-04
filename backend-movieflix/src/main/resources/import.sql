@@ -11,81 +11,81 @@ INSERT INTO tb_genre(description) VALUES ('FAMILY');
 
 /* ACTION */
 
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://assets.cinebelasartes.com.br/wp-content/uploads/2022/11/Mad-Max-Estrada-da-Furi-600x855-min.jpeg', 'Mad Max: Estrada da Fúria', '', 120, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://assets.cinebelasartes.com.br/wp-content/uploads/2022/11/Mad-Max-Estrada-da-Furi-600x855-min.jpeg', 'Mad Max: Estrada da Fúria', 'Descrição', 120, 1);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/13/John_wick_ver3.jpg', 'John Wick', '', 101, 1);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://cdn.flickeringmyth.com/wp-content/uploads/2018/07/Mission-Impossible-FAllout-poster-45936823.jpg', 'Mission: Impossible - Fallout', '', 147, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://cdn.flickeringmyth.com/wp-content/uploads/2018/07/Mission-Impossible-FAllout-poster-45936823.jpg', 'Mission: Impossible - Fallout', 'Descrição', 147, 1);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/2/2a/Die_hard_poster_promocional.png', 'Die Hard', '', 132, 1);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/5/5a/Terminator1984.jpg/250px-Terminator1984.jpg', 'O Exterminador do Futuro', '', 107, 1);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg', 'Vingadores: Ultimato', '', 181, 1);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/0/0d/EsdlaIII.jpg/250px-EsdlaIII.jpg', 'O Senhor dos Anéis: O Retorno do Rei', '', 201, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/5/5a/Terminator1984.jpg/250px-Terminator1984.jpg', 'O Exterminador do Futuro', 'Descrição', 107, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg', 'Vingadores: Ultimato', 'Descrição', 181, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, video_url, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/0/0d/EsdlaIII.jpg/250px-EsdlaIII.jpg', 'O Senhor dos Anéis: O Retorno do Rei', 'Descrição', 201, 'https://www.youtube.com/watch?v=Al5iC4CnhYc', 1);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/2/22/OsVingadores2.jpg', 'Vingadores: Era de Ultron', '', 141, 1);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/59/The_Lord_of_the_Rings_The_Two_Towers.jpg', 'O Senhor dos Anéis: As Duas Torres', '', 179, 1);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/ooMpCgZK3ftSd8b5z8pob30iilVw2sUf6V9DQoWPRd4UlvWhT-PJIJMgJEojH3WjTXt4srbfzUuEYu72J-Q', 'O Poderoso Chefão', '', 177, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/59/The_Lord_of_the_Rings_The_Two_Towers.jpg', 'O Senhor dos Anéis: As Duas Torres', 'Descrição', 179, 1);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/ooMpCgZK3ftSd8b5z8pob30iilVw2sUf6V9DQoWPRd4UlvWhT-PJIJMgJEojH3WjTXt4srbfzUuEYu72J-Q', 'O Poderoso Chefão', 'Descrição', 177, 1);
 
 /* COMEDY */
 
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://www.papodecinema.com.br/wp-content/uploads/2013/09/20200914-o-grande-golpe-papo-de-cinema-cartaz.jpg', 'O Grande Golpe', '', 115, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/b/bc/Monty_Python_Holy_Grail.jpg', 'Monty Python e o Cálice Sagrado', '', 92, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeA98b03LA8znDkNS7Dumvwzb8NkgOrd2eAw&s', 'O Máskara', '', 101, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/5/5e/Dumb_and_Dumber_Pôster.jpg/220px-Dumb_and_Dumber_Pôster.jpg', 'Dumb and Dumber', '', 107, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/e/e8/The_Devil_Wears_Prada_-_filme.jpg', 'O Diabo Veste Prada', '', 109, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/15/Zoolander.jpg', 'Zoolander', '', 89, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/d/d1/Archormanposter.jpg/200px-Archormanposter.jpg', 'Anchorman: O Lendário Âncora', '', 98, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/e/e9/Talladega_Nights_The_Ballad_of_Ricky_Bobby.jpg', 'Talladega Nights: O Rei da Velocidade', '', 108, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/d/d9/StepbrothersMP08.jpg', 'Step Brothers', '', 98, 3);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/8/8b/Superbad_Poster.png/200px-Superbad_Poster.png', 'Superbad', '', 119, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://www.papodecinema.com.br/wp-content/uploads/2013/09/20200914-o-grande-golpe-papo-de-cinema-cartaz.jpg', 'O Grande Golpe', 'Descrição', 115, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/b/bc/Monty_Python_Holy_Grail.jpg', 'Monty Python e o Cálice Sagrado', 'Descrição', 92, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeA98b03LA8znDkNS7Dumvwzb8NkgOrd2eAw&s', 'O Máskara', 'Descrição', 101, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/5/5e/Dumb_and_Dumber_Pôster.jpg/220px-Dumb_and_Dumber_Pôster.jpg', 'Dumb and Dumber', 'Descrição', 107, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/e/e8/The_Devil_Wears_Prada_-_filme.jpg', 'O Diabo Veste Prada', 'Descrição', 109, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/15/Zoolander.jpg', 'Zoolander', 'Descrição', 89, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/d/d1/Archormanposter.jpg/200px-Archormanposter.jpg', 'Anchorman: O Lendário Âncora', 'Descrição', 98, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/e/e9/Talladega_Nights_The_Ballad_of_Ricky_Bobby.jpg', 'Talladega Nights: O Rei da Velocidade', 'Descrição', 108, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/d/d9/StepbrothersMP08.jpg', 'Step Brothers', 'Descrição', 98, 3);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/8/8b/Superbad_Poster.png/200px-Superbad_Poster.png', 'Superbad', 'Descrição', 119, 3);
 
 /* DOCUMENTARY */
 
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/0/0d/Super_Size_Me.jpg', 'Super Size Me', '', 100, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/e1gp64l4RzfnDNi7umMouSYdw1vL29fDzAN3vCef1Ez7W5xNNhSeSrXTbr3EmDvaVGZ29A=w240-h480-rw', 'The Cove', '', 92, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/TzOIAIjrbAtoCBNWUk-mSMFcmvW9exA_ep-5nxA04LBFOk6DpRjyyTkW5UIxWOcJRyo', 'Blackfish', '', 83, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/a/a4/The_Imposter.jpg', 'The Imposter', '', 99, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/c/ca/The_Act_of_Killing_%282012_film%29.jpg', 'The Act of Killing', '', 115, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/8/85/The_Look_of_Silence.jpg', 'The Look of Silence', '', 103, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/6/64/The_Square_%282017_film%29_poster.png', 'The Square', '', 104, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/The_Staircase.png/220px-The_Staircase.png', 'The Staircase', '', 108, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/6/69/The_Thin_Blue_Line_poster.jpg', 'The Thin Blue Line', '', 101, 4);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images.justwatch.com/poster/252342337/s718/the-up-series.jpg', 'The Up Series', '', 120, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/0/0d/Super_Size_Me.jpg', 'Super Size Me', 'Descrição', 100, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/e1gp64l4RzfnDNi7umMouSYdw1vL29fDzAN3vCef1Ez7W5xNNhSeSrXTbr3EmDvaVGZ29A=w240-h480-rw', 'The Cove', 'Descrição', 92, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/TzOIAIjrbAtoCBNWUk-mSMFcmvW9exA_ep-5nxA04LBFOk6DpRjyyTkW5UIxWOcJRyo', 'Blackfish', 'Descrição', 83, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/a/a4/The_Imposter.jpg', 'The Imposter', 'Descrição', 99, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/c/ca/The_Act_of_Killing_%282012_film%29.jpg', 'The Act of Killing', 'Descrição', 115, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/8/85/The_Look_of_Silence.jpg', 'The Look of Silence', 'Descrição', 103, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/6/64/The_Square_%282017_film%29_poster.png', 'The Square', 'Descrição', 104, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/thumb/d/dd/The_Staircase.png/220px-The_Staircase.png', 'The Staircase', 'Descrição', 108, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/6/69/The_Thin_Blue_Line_poster.jpg', 'The Thin Blue Line', 'Descrição', 101, 4);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images.justwatch.com/poster/252342337/s718/the-up-series.jpg', 'The Up Series', 'Descrição', 120, 4);
 
 /* DRAMA */
 
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/-40KAkAOEicX_K7K5x4-UevLUyC8aSYpg0PZxRPTmUOEoQPgAU5Tz7ymmQhiYcab2VzS', '12 Anos de Escravidão', '', 134, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/d/d6/Intouchables_cartaz.jpg', 'Intocáveis', '', 195, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/1d/SchindlerPoster.jpg', 'A Lista de Schindler', '', 195, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/PGC7Em1P0O9AB_doKTuPe-Dj6jjGCL-5olKUw7UEaSFUdkRfQvpWNHNP5vHGF0xUvrHH', 'O Diário de Anne Frank', '', 170, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/eVcHQVscM8yPY5pi6KlXFYxJb2SwLETV2dMIJxYVFJx_F79VJ9i0osXux0N394DU4SYj', 'A Grande Beleza', '', 142, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images.justwatch.com/poster/243405440/s332/clube-da-luta', 'O Clube da Luta', '', 139, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/8/84/AOrigemPoster.jpg', 'A Origem', '', 148, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/ge7iv_Q5mB40K8aqEi1JM_Ybe1Pf0lqe-iI7mvC2fvFZiqBlKLbnVgmFL0-uT6q5aKI', 'O Código Da Vinci', '', 149, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/3/3a/Chaplin_%28filme%29.jpg', 'Chaplin', '', 143, 5);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/50/The_Iron_Lady_2011.jpg', 'A Dama de Ferro', '', 115, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/-40KAkAOEicX_K7K5x4-UevLUyC8aSYpg0PZxRPTmUOEoQPgAU5Tz7ymmQhiYcab2VzS', '12 Anos de Escravidão', 'Descrição', 134, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/d/d6/Intouchables_cartaz.jpg', 'Intocáveis', 'Descrição', 195, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/1d/SchindlerPoster.jpg', 'A Lista de Schindler', 'Descrição', 195, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/PGC7Em1P0O9AB_doKTuPe-Dj6jjGCL-5olKUw7UEaSFUdkRfQvpWNHNP5vHGF0xUvrHH', 'O Diário de Anne Frank', 'Descrição', 170, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/eVcHQVscM8yPY5pi6KlXFYxJb2SwLETV2dMIJxYVFJx_F79VJ9i0osXux0N394DU4SYj', 'A Grande Beleza', 'Descrição', 142, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images.justwatch.com/poster/243405440/s332/clube-da-luta', 'O Clube da Luta', 'Descrição', 139, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/8/84/AOrigemPoster.jpg', 'A Origem', 'Descrição', 148, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://play-lh.googleusercontent.com/ge7iv_Q5mB40K8aqEi1JM_Ybe1Pf0lqe-iI7mvC2fvFZiqBlKLbnVgmFL0-uT6q5aKI', 'O Código Da Vinci', 'Descrição', 149, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/3/3a/Chaplin_%28filme%29.jpg', 'Chaplin', 'Descrição', 143, 5);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/50/The_Iron_Lady_2011.jpg', 'A Dama de Ferro', 'Descrição', 115, 5);
 
 /* FANTASY */
 
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/1d/Harry_Potter_Pedra_Filosofal_2001.jpg', 'Harry Potter e a Pedra Filosofal', '', 152, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/0/05/The_Chronicles_of_Narnia_-_Prince_Caspian.jpg', 'As Crônicas de Nárnia - O Príncipe Caspian', '', 150, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/10/The_Chronicles_of_Narnia_-_The_Lion%2C_the_Witch_and_the_Wardrobe.jpg', 'As Crônicas de Nárnia - O Leão, a Feiticeira e o Guarda-roupa', '', 165, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://br.web.img3.acsta.net/medias/nmedia/18/91/86/25/20180397.jpg', 'O Hobbit: Uma Jornada Inesperada', '', 169, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/0/0e/The_Hobbit_-_The_Battle_of_the_Five_Armies.jpg/240px-The_Hobbit_-_The_Battle_of_the_Five_Armies.jpg', 'O Hobbit: A Batalha dos Cinco Exércitos', '', 161, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/7/7f/Dragonheart_5_Poster.jpg', 'Coração de Dragão', '', 144, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/3/37/The_Last_House_On_The_Left_Promotional_Poster.jpg', 'A Última Casa à Esquerda', '', 110, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://br.web.img2.acsta.net/pictures/17/04/12/19/53/154840.jpg', 'O Círculo', '', 112, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images-3.rakuten.tv/storage/global-movie/translation/artwork/5f6db76b-1614-4b79-a93e-bc96ca0e89e9-as-cronicas-de-spiderwick-the-spiderwick-chronicles-1611390490.jpeg', 'As Crônicas de Spiderwick', '', 165, 6);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://br.web.img3.acsta.net/medias/nmedia/18/93/94/10/20287529.jpg', 'O Mágico de Oz', '', 101, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/1d/Harry_Potter_Pedra_Filosofal_2001.jpg', 'Harry Potter e a Pedra Filosofal', 'Descrição', 152, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/0/05/The_Chronicles_of_Narnia_-_Prince_Caspian.jpg', 'As Crônicas de Nárnia - O Príncipe Caspian', 'Descrição', 150, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/1/10/The_Chronicles_of_Narnia_-_The_Lion%2C_the_Witch_and_the_Wardrobe.jpg', 'As Crônicas de Nárnia - O Leão, a Feiticeira e o Guarda-roupa', 'Descrição', 165, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://br.web.img3.acsta.net/medias/nmedia/18/91/86/25/20180397.jpg', 'O Hobbit: Uma Jornada Inesperada', 'Descrição', 169, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/0/0e/The_Hobbit_-_The_Battle_of_the_Five_Armies.jpg/240px-The_Hobbit_-_The_Battle_of_the_Five_Armies.jpg', 'O Hobbit: A Batalha dos Cinco Exércitos', 'Descrição', 161, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/7/7f/Dragonheart_5_Poster.jpg', 'Coração de Dragão', 'Descrição', 144, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/3/37/The_Last_House_On_The_Left_Promotional_Poster.jpg', 'A Última Casa à Esquerda', 'Descrição', 110, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://br.web.img2.acsta.net/pictures/17/04/12/19/53/154840.jpg', 'O Círculo', 'Descrição', 112, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://images-3.rakuten.tv/storage/global-movie/translation/artwork/5f6db76b-1614-4b79-a93e-bc96ca0e89e9-as-cronicas-de-spiderwick-the-spiderwick-chronicles-1611390490.jpeg', 'As Crônicas de Spiderwick', 'Descrição', 165, 6);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://br.web.img3.acsta.net/medias/nmedia/18/93/94/10/20287529.jpg', 'O Mágico de Oz', 'Descrição', 101, 6);
 
 /* SCIENCE_FICTION */
 
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/b/bb/BladeRunner-Pôster.jpg', 'Blade Runner', '', 117, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/7/7e/Star_Wars_Episódio_IV_Uma_Nova_Esperança.jpg', 'Star Wars: Episódio IV - Uma Nova Esperança', '', 121, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/53/Two_thousand_and_one_a_space_odyssey_ver2.jpg', '2001: Uma Odisseia no Espaço', '', 141, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Alien_movie_poster.jpg/220px-Alien_movie_poster.jpg', 'Alien', '', 117, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/b/bb/BladeRunner-Pôster.jpg', 'Blade Runner', 'Descrição', 117, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/7/7e/Star_Wars_Episódio_IV_Uma_Nova_Esperança.jpg', 'Star Wars: Episódio IV - Uma Nova Esperança', 'Descrição', 121, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/5/53/Two_thousand_and_one_a_space_odyssey_ver2.jpg', '2001: Uma Odisseia no Espaço', 'Descrição', 141, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Alien_movie_poster.jpg/220px-Alien_movie_poster.jpg', 'Alien', 'Descrição', 117, 7);
 INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/c/c1/The_Matrix_Poster.jpg', 'Matrix', '', 136, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/3/3a/Interstellar_Filme.png/250px-Interstellar_Filme.png', 'Interstellar', '', 169, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Forbiddenplanetposter.jpg/1200px-Forbiddenplanetposter.jpg', 'O Planeta Proibido', '', 98, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/3/30/Solaris-film-2002.jpeg', 'Solaris', '', 99, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/6/60/Minority_Report.jpg/220px-Minority_Report.jpg', 'Minority Report', '', 145, 7);
-INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/f/f9/Elysium_Poster.jpg', 'Elysium', '', 109, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/3/3a/Interstellar_Filme.png/250px-Interstellar_Filme.png', 'Interstellar', 'Descrição', 169, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Forbiddenplanetposter.jpg/1200px-Forbiddenplanetposter.jpg', 'O Planeta Proibido', 'Descrição', 98, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/3/30/Solaris-film-2002.jpeg', 'Solaris', 'Descrição', 99, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/6/60/Minority_Report.jpg/220px-Minority_Report.jpg', 'Minority Report', 'Descrição', 145, 7);
+INSERT INTO tb_movies(img_url, title, description, duration, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/f/f9/Elysium_Poster.jpg', 'Elysium', 'Descrição', 109, 7);
 
 /* FAMILY */
 
@@ -127,3 +127,28 @@ INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) 
 INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/736x/d4/d9/a0/d4d9a00b920f5a59d3001e6b6011d22b.jpg', 'YU-GI-OH!', '', 5, 2);
 INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/originals/93/f0/60/93f060ad38a832119cf67a5e82170582.jpg', 'Digimon', '', 7, 2);
 INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/originals/e8/7b/1b/e87b1bf0b5596c09a3f5c2d0796a6ba6.jpg', 'Bleach', '', 16, 2);
+
+/* Comédia */
+
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://i.pinimg.com/474x/8b/9b/b2/8b9bb25d5e6e44317bee38908b54885f.jpg', 'Um Maluco no Pedaço', '', 6, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://static1.srcdn.com/wordpress/wp-content/uploads/2023/03/the-office-poster-michael-scott.jpg', 'The Office', '', 9, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRieJ_ukcB3x4WFf6moIRsjzOAyDQoeEC0I0YxzyY__Ks-XSN3rKqWrGPb7xTUMGSxCbF4&usqp=CAU', 'Friends', '', 10, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p12603293_b_v8_af.jpg', 'The Ranch', '', 8, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/9/9b/Two_and_a_Half_Men_%285%C2%AA_temporada%29.jpg', 'Two and a Half Men', '', 12, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/7/71/Brooklyn_Nine-Nine-5.jpg', 'Brooklyn Nine-Nine', '', 8, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/9/9a/Big-bang-theory_Temporada_12_poster.jpg', 'The Big Bang Theory', '', 12, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/a/a1/How_I_Met_Your_Mother_DVD-8.jpg', 'How I Met Your Mother', '', 9, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://d2d7ho1ae66ldi.cloudfront.net/ArquivoTitulos/112a74a6-bd58-11ed-aa6e-9587410378a2/800_Todo+Mundo+Odeia+o+Chris_poster.jpg', 'Todo Mundo Odeia o Chris', '', 4, 3);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://cinema10.com.br/upload/series/series_570_images.jpg', 'As Visões da Raven', '', 4, 3);
+
+/* Drama */
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/f/f7/House_of_the_Dragon_Season_2_Official_Poster.png', 'A Casa do Dragão', '', 2, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/thumb/a/a4/Game_of_Thrones_Temporada_1_Poster.jpg/230px-Game_of_Thrones_Temporada_1_Poster.jpg', 'Game of Thrones', '', 8, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/3/3e/The_Last_of_Us_season_1_Blu-ray.png', 'The Last of Us', '', 2, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqUcGprzlWh7-8pwRiboGk0eG7jZGfaH0_pvV2fbsX4yxBGLjEHW6UKng-z111JMdm408&usqp=CAU', 'Yellowstone', '', 5, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://static.kinoafisha.info/k/series_posters/800x1200/upload/series/posters/9/4/1/149/653526391595441494.jpg', 'Suits', '', 9, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/en/4/46/Prison_Break_season_1_dvd.jpg', 'Prison Break', '', 5, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://br.web.img2.acsta.net/pictures/17/09/21/22/56/0709709.jpg', 'Gotham', '', 5, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://br.web.img3.acsta.net/img/22/92/2292efd71e78438c8686d9d7f57a61a7.jpg', 'Cidade de Deus: A Luta Não Para', '', 1, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://br.web.img3.acsta.net/pictures/15/09/24/09/46/407839.jpg', 'O Mentalista', '', 7, 5);
+INSERT INTO tb_series(img_url, title, description, number_of_seasons, genre_id) VALUES ('https://upload.wikimedia.org/wikipedia/pt/6/6a/Euphoria-1.jpg', 'Euphoria', '', 2, 5);

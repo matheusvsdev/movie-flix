@@ -26,8 +26,8 @@ public class EpisodeEntity extends Content {
         this.season = season;
     }
 
-    public EpisodeEntity(String imgUrl, String title, String description, Long id, Integer episodeNumber, Integer duration, SeasonEntity season) {
-        super(imgUrl, title, description);
+    public EpisodeEntity(String imgUrl, String title, String description, String videoUrl, Long id, Integer episodeNumber, Integer duration, SeasonEntity season) {
+        super(imgUrl, title, description, videoUrl);
         this.id = id;
         this.episodeNumber = episodeNumber;
         this.duration = duration;
