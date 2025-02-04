@@ -133,9 +133,16 @@ function carregarFilmes(
         li.innerHTML = `
                     <img src="${movie.imgUrl}" alt="${movie.title}" />
                     <h3>${movie.title}</h3>
-                    <button>Assistir</button>
+                    <button id="assistir-${movie.id}" class="assistir-button">Assistir</button>
                   `;
         filmesList.appendChild(li);
+
+        // Adiciona evento de click ao botão Assistir
+        document
+          .getElementById(`assistir-${movie.id}`)
+          .addEventListener("click", function () {
+            searchMovieById(movie.id);
+          });
       });
 
       // Atualiza o total de páginas no elemento section
@@ -175,7 +182,7 @@ function carregarSeries(
         li.innerHTML = `
                     <img src="${serie.imgUrl}" alt="${serie.title}" />
                     <h3>${serie.title}</h3>
-                    <button>Assistir</button>
+                    <button id="assistir-${serie.id}" class="assistir-button">Assistir</button>
                   `;
         seriesList.appendChild(li);
       });
@@ -451,9 +458,16 @@ function searchMovies() {
         li.innerHTML = `
             <img src="${movie.imgUrl}" alt="${movie.title}" />
             <h3>${movie.title}</h3>
-            <button>Assistir</button>
+            <button id="assistir-${movie.id}">Assistir</button>
           `;
         searchResultsList.appendChild(li);
+
+        // Adiciona evento de click ao botão Assistir
+        document
+          .getElementById(`assistir-${movie.id}`)
+          .addEventListener("click", function () {
+            searchMovieById(movie.id);
+          });
       });
     })
     .catch((error) => console.error("Erro ao pesquisar filmes:", error));
@@ -477,14 +491,136 @@ function searchSeries() {
         li.className = "item";
         li.innerHTML = `
             <img src="${serie.imgUrl}" alt="${serie.title}" />
-            <h3>${serie.title}</h3>
-            <button>Assistir</button>
+            <h3>${movie.title}</h3>
+            <button id="assistir-${serie.id}">Assistir</button>
           `;
         searchResultsList.appendChild(li);
+
+        // Adiciona evento de click ao botão Assistir
+        document
+          .getElementById(`assistir-${serie.id}`)
+          .addEventListener("click", function () {
+            searchMovieById(movie.id);
+          });
       });
     })
-    .catch((error) => console.error("Erro ao pesquisar séries:", error));
+    .catch((error) => console.error("Erro ao pesquisar filmes:", error));
 }
+
+// Função que faz a requisição ao endpoint de pesquisa por ID e exibe o filme
+function searchMovieById(id) {
+  const url = `${URL_FILMES}/${id}`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((movie) => {
+      // Esconde todas as seções
+      document.querySelectorAll("section").forEach(function (section) {
+        section.style.display = "none";
+      });
+
+      // Cria a seção do filme se ela não existir
+      let movieSection = document.getElementById("movie-details");
+      if (!movieSection) {
+        movieSection = document.createElement("section");
+        movieSection.id = "movie-details";
+        movieSection.className = "movie-details";
+        movieSection.innerHTML = `
+          <img src="${movie.imgUrl}" alt="${movie.title}" />
+          <h3>${movie.title}</h3>
+          <p>${movie.description}</p>
+          <span>${movie.duration} minutos de duração</span>
+          <div id="video-player" style="display: none;">
+            <iframe id="video-iframe" width="100%" height="360" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <button id="start-button">Assistir</button>
+          <button id="back-button">Voltar</button>
+        `;
+        document.querySelector("main").appendChild(movieSection);
+      } else {
+        // Atualiza a seção do filme se já existir
+        movieSection.querySelector("img").src = movie.imgUrl;
+        movieSection.querySelector("img").alt = movie.title;
+        movieSection.querySelector("h3").textContent = movie.title;
+        movieSection.querySelector("p").textContent = movie.description;
+        movieSection.querySelector("#video-iframe").src = movie.videoUrl.replace("watch?v=", "embed/");
+      }
+
+      // Mostra a seção do filme
+      movieSection.style.display = "block";
+
+      // Adiciona evento de click ao botão Assistir
+      document
+        .getElementById("start-button")
+        .addEventListener("click", function () {
+          const videoUrl = movie.videoUrl.replace("watch?v=", "embed/");
+          document.getElementById("video-iframe").src = videoUrl;
+          document.getElementById("video-player").style.display = "block";
+        });
+
+      // Adiciona evento de click ao botão Voltar
+      document.getElementById("back-button").addEventListener("click", function () {
+        // Remove a seção do filme
+        document.getElementById("movie-details").remove();
+
+        // Mostra todas as seções
+        document.querySelectorAll("section").forEach(function (section) {
+          section.style.display = "block";
+        });
+
+        // Rola a página para o topo
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    })
+    .catch((error) => console.error("Erro ao pesquisar filme:", error));
+}
+
+// Função que faz a requisição ao endpoint de pesquisa e exibe os resultados
+function searchMovies() {
+  const searchInput = document.getElementById("search-input");
+  const searchQuery = searchInput.value.trim();
+  if (searchQuery === "") return;
+
+  const url = `${URL_FILMES}?title=${searchQuery}&page=0&size=4`;
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      const searchResultsList = document.getElementById("search-results-list");
+      searchResultsList.innerHTML = "";
+
+      data.content.forEach((movie) => {
+        const li = document.createElement("li");
+        li.className = "item";
+        li.innerHTML = `
+            <img src="${movie.imgUrl}" alt="${movie.title}" />
+            <h3>${movie.title}</h3>
+            <button id="assistir-search-${movie.id}">Assistir</button>
+          `;
+        searchResultsList.appendChild(li);
+
+        // Adiciona evento de click ao botão Assistir
+        document
+          .getElementById(`assistir-search-${movie.id}`)
+          .addEventListener("click", function () {
+            searchMovieById(movie.id);
+          });
+      });
+    })
+    .catch((error) => console.error("Erro ao pesquisar filmes:", error));
+}
+
+// Função de click para Séries ou Filmes
+document.querySelectorAll(".dropdown-categories a").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+
+    // Redireciona para a URL do link clicado
+    const href = link.getAttribute("href");
+    window.location.href = href;
+  });
+});
 
 // Verifica se o backend está disponível antes de carregar as seções e os botões de navegação
 isBackendAvailable().then((available) => {

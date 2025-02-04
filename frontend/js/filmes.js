@@ -96,12 +96,18 @@ async function fetchCategories() {
   const categories = await response.json();
   const dropdown = document.getElementById("dropdown-categories");
 
+  // IDs das categorias não exibidas
+  const categoriasIgnoradas = [2];
+
   categories.forEach((category, index) => {
-    const link = document.createElement("a");
-    link.href = `#${index + 1}`; // Usamos o índice + 1 para corresponder aos IDs numéricos das seções
-    link.id = `link-${index + 1}`;
-    link.textContent = category.description;
-    dropdown.appendChild(link);
+    // Verifica se a categoria está na lista de ignoradas
+    if (!categoriasIgnoradas.includes(category.id)) {
+      const link = document.createElement("a");
+      link.href = `#${index + 1}`; // Usamos o índice + 1 para corresponder aos IDs numéricos das seções
+      link.id = `link-${index + 1}`;
+      link.textContent = category.description;
+      dropdown.appendChild(link);
+    }
   });
 }
 
@@ -133,7 +139,7 @@ function carregarFilmes(
         li.innerHTML = `
                     <img src="${movie.imgUrl}" alt="${movie.title}" />
                     <h3>${movie.title}</h3>
-                    <button>Assistir</button>
+                    <button id="start-button">Assistir</button>
                   `;
         filmesList.appendChild(li);
       });
@@ -335,7 +341,7 @@ function searchMovies() {
         li.innerHTML = `
             <img src="${movie.imgUrl}" alt="${movie.title}" />
             <h3>${movie.title}</h3>
-            <button>Assistir</button>
+            <button id="start-button">Assistir</button>
           `;
         searchResultsList.appendChild(li);
       });
